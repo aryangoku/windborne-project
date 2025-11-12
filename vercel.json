@@ -5,7 +5,7 @@
       "src": "client/package.json",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "client/dist"
+        "distDir": "dist" 
       }
     },
     {
@@ -15,12 +15,12 @@
   ],
   "routes": [
     {
-      "src": "/api/combined",
-      "dest": "/api/combined.js"
+      "src": "/api/(.*)",
+      "dest": "/api/$1.js"
     },
     {
       "src": "/(.*)",
-      "dest": "client/$1"
+      "dest": "/$1"
     }
   ],
   "installCommand": "npm install --prefix client && npm install"
