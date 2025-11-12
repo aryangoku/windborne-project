@@ -1,7 +1,6 @@
 export default async function handler(req, res) {
   try {
     const { url, method } = req;
-
     const path = url.split('?')[0];
 
     if (path === '/api/users' && method === 'GET') {
@@ -16,7 +15,6 @@ export default async function handler(req, res) {
     if (path === '/api/products' && method === 'GET') {
       return res.status(200).json({ products: ['Laptop', 'Phone', 'Tablet'] });
     }
-
 
     res.status(404).json({ error: 'Not Found' });
   } catch (err) {

@@ -1,0 +1,9 @@
+{
+  "name": "windborne-api",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {},
+  "scripts": {
+    "start": "node combined.js"
+  }
+}
